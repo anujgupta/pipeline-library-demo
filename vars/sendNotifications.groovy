@@ -28,9 +28,6 @@ def call(String buildStatus = 'STARTED') {
   }
 
   // Send notifications
-  slackSend (color: colorCode, message: summary)
-
-  hipchatSend (color: color, notify: true, message: summary)
 
   emailext (
       to: 'anuj.gupta1000097@homecredit.co.in',
