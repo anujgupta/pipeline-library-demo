@@ -1,0 +1,22 @@
+#!groovy
+@Library('pipeline-library-demo') _
+
+pipeline {
+    
+    agent any
+
+stages {
+              stage ('Test Phase'){
+                             steps {
+                                     sayHello 'Dave'      
+                                   }
+
+              }
+       }
+    post {
+    always {
+      sendNotifications currentBuild.result
+    }
+  }
+    
+}
