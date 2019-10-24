@@ -1,22 +1,22 @@
-curl --head --header "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" "https://git.XXXXXXXX/api/v4/projects"
+curl --head --header "PRIVATE-TOKEN: YYYYYYYY" "https://git.XXXXXXXX/api/v4/projects"
 
-curl https://git.XXXXXXXX/api/v4/projects?private_token=KpecfVJYbuK4csc92McP
+curl https://git.XXXXXXXX/api/v4/projects?private_token=YYYYYYYY
 
-curl --header  "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" "https://git.XXXXXXXX/api/v4/users"
+curl --header  "PRIVATE-TOKEN: YYYYYYYY" "https://git.XXXXXXXX/api/v4/users"
 
-curl --header  "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" "https://git.XXXXXXXX/api/v4/"
+curl --header  "PRIVATE-TOKEN: YYYYYYYY" "https://git.XXXXXXXX/api/v4/"
 
-[root@spinvx195 ps-parent]# curl --header  "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" https://git.XXXXXXXX/api/v4/projects/6273/repository/tree
+[root@spinvx195 ps-parent]# curl --header  "PRIVATE-TOKEN: YYYYYYYY" https://git.XXXXXXXX/api/v4/projects/6273/repository/tree
 [{"id":"af25d0ecfabe4fcb85041787c21996e91edc0492","name":"updated_pos_list.sql","type":"blob","path":"updated_pos_list.sql","mode":"100644"}]
 
-curl --request GET --header "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" https://git.XXXXXXXX/api/v4/projects/6273/repository/tree : Provides full strucrtue of a repository
+curl --request GET --header "PRIVATE-TOKEN: YYYYYYYY" https://git.XXXXXXXX/api/v4/projects/6273/repository/tree : Provides full strucrtue of a repository
 
-curl --header "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" https://git.XXXXXXXX/api/v4/projects/6273/repository/files/updated_pos_list%2Esql?ref=master : Provides content of a particular files in repository in decode manner.
+curl --header "PRIVATE-TOKEN: YYYYYYYY" https://git.XXXXXXXX/api/v4/projects/6273/repository/files/updated_pos_list%2Esql?ref=master : Provides content of a particular files in repository in decode manner.
 
-curl --request GET --header "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" https://git.XXXXXXXX/api/v4/projects/6273/repository/files/updated_pos_list%2Esql/raw?ref=master : Provides content of a data in actual or raw format.
+curl --request GET --header "PRIVATE-TOKEN: YYYYYYYY" https://git.XXXXXXXX/api/v4/projects/6273/repository/files/updated_pos_list%2Esql/raw?ref=master : Provides content of a data in actual or raw format.
 
 awk -F: '$1=="created_at"{print $2;exit;}'
 
-curl  --header "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" https://git.XXXXXXXX/api/v4/projects/6273/repository/commits
+curl  --header "PRIVATE-TOKEN: YYYYYYYY" https://git.XXXXXXXX/api/v4/projects/6273/repository/commits
 
-curl -s --header   "PRIVATE-TOKEN: KpecfVJYbuK4csc92McP" "https://git.XXXXXXXX/api/v4/projects/6273/repository/commits" | json_pp | grep created | head -1 | cut -d':' -f2 | cut -d'"' -f2 | cut -c 1-10 : Latest commit date in a repository.
+curl -s --header   "PRIVATE-TOKEN: YYYYYYYY" "https://git.XXXXXXXX/api/v4/projects/6273/repository/commits" | json_pp | grep created | head -1 | cut -d':' -f2 | cut -d'"' -f2 | cut -c 1-10 : Latest commit date in a repository.
